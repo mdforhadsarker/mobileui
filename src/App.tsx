@@ -1,11 +1,19 @@
 import "@mantine/core/styles.css";
-import { MantineProvider } from "@mantine/core";
 import Button from "./components/Button";
-import './App.css'
+import "./App.css";
+import { NavbarMinimal } from "./components/NavBarMinimal";
+import { createTheme, MantineProvider } from "@mantine/core";
 
 export default function App() {
+  const theme = createTheme({
+    fontFamily: "Open Sans, sans-serif",
+    primaryColor: "cyan",
+
+  });
+
   return (
-    <MantineProvider>
+    <MantineProvider theme={theme}>
+      <NavbarMinimal />
       <Button />
     </MantineProvider>
   );
