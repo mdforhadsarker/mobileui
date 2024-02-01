@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image, Title, Text, Button } from '@mantine/core';
+import { Card, Image, Title, Text, Button, Group } from '@mantine/core';
 import { FiPlus } from "react-icons/fi";
 
 interface ItemCardProps {
@@ -12,32 +12,35 @@ interface ItemCardProps {
 
 const ItemCard: React.FC<ItemCardProps> = ({ image, title, subtitle, price, onAddToCart }) => {
     return (
-        <Card shadow="sm" style={{ width: '300px' }}>
-            <Image src={image} alt={title} height={200} fit="cover" />
-            <div style={{ padding: '16px' }}>
-                <Title order={2} style={{ marginBottom: '8px' }}>
+        <Card shadow="sm" padding="xs" radius="md" withBorder style={{ width: '80px' }}>
+            <Card.Section style={{ width: '60px', marginLeft: '10px' }}>
+                <Image src={image} alt={title}  width={20} fit="cover" radius="md" />
+            </Card.Section>
+            <Group gap={5} style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
+                <Title size="xs">
                     {title}
                 </Title>
-                <Text style={{ marginBottom: '8px' }}>{subtitle}</Text>
-                <Text style={{ marginBottom: '8px', fontWeight: 'bold', fontSize: 24 }} >
+                <Text size="xs" c="dimmed">
+                    {subtitle}
+                </Text>
+            </Group>
+
+            <Group justify="space-between" >
+                <Text size='sm' fw={700} >
                     {price}
                 </Text>
                 <Button
-                    style={{
-                        width: '30px',
-                        height: '30px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        backgroundColor: '#006d75',
-                        color: 'white',
-                        borderRadius: '10%',
-                    }}
+                    size="compact-sm" radius="md"
                     onClick={onAddToCart}
+                    variant="gradient"
+                    gradient={{ from: 'blue', to: 'cyan', deg: 360 }}
+
                 >
                     <FiPlus />
                 </Button>
-            </div>
+            </Group>
+
+
         </Card>
     );
 };

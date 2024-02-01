@@ -23,7 +23,7 @@ function DashboardPopular() {
     return (
         <ScrollArea style={{ overflow: 'hidden' }}>
             <div className={classes.dashboard}>
-                <div style={{ width: "375px", height: "736px", borderRadius: "30px", backgroundColor: "white" }}>
+                <div style={{ width: "200px", height: "450px", borderRadius: "20px", backgroundColor: "white" }}>
                     <SimpleGrid cols={1} style={{ maxHeight: '100%', overflowY: 'auto' }}>
                         <Header
                             menuIcon={<FiAlignJustify style={{ marginRight: rem(25), cursor: 'pointer', fontWeight: 'normal' }} />}
@@ -33,8 +33,8 @@ function DashboardPopular() {
                                     src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg"
                                     alt="Profile"
                                     style={{
-                                        width: rem(30),
-                                        height: rem(35),
+                                        width: rem(20),
+                                        height: rem(25),
                                         borderRadius: '20%',
                                         cursor: 'pointer',
                                         objectFit: 'cover',
@@ -51,22 +51,18 @@ function DashboardPopular() {
                                 paddingLeft: `${rem(25)}`,
                                 paddingRight: `${rem(25)}`,
                                 color: 'black',                            
-                                minWidth: 375,
+                                minWidth: 200,
                             }}
                         >
-                            <Text style={{fontSize: 24, fontWeight: 'bold'}}>Popular</Text>
+                            <Text style={{fontSize: 16, fontWeight: 'bold'}}>Popular</Text>
                             <Pagination />
                         </Box>
                         <ItemCard {...itemDetails} onAddToCart={() => console.log('Added to cart')} />
 
                         {/* <div style={{ backgroundColor: 'grey', height: 300, borderRadius: 30 }}>2</div>
                         <div style={{ backgroundColor: 'green', height: 300, borderRadius: 30 }}>3</div> */}
-
                     </SimpleGrid>
-
                 </div>
-
-
             </div>
         </ScrollArea>
 

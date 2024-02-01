@@ -1,13 +1,14 @@
 .dashboard {
     background-color: var(--mantine-color-blue-filled);
     color: var(--mantine-color-white);
-    padding: var(--mantine-spacing-md);
+    /* padding: var(--mantine-spacing-xs); */
+    padding: 5px;
     text-align: center;
     border-radius: 30px;
  
 }
 
-@media (min-width: 375px) {
+@media (min-width: 200px) {
     .dashboard {
         background-color: var(--mantine-color-white-filled);
     }

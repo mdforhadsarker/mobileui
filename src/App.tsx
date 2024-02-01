@@ -16,12 +16,14 @@ export default function App() {
 
   return (
     <MantineProvider theme={theme}>
-      <Group>
+      <Group style={{gap: 0}}>
         <DashboardPopular />
         <DashboardPopular />
         <DashboardPopular />
-      
-       
+        <DashboardPopular />
+        <DashboardPopular />
+        <DashboardPopular />
+        <DashboardPopular />
       </Group>
     </MantineProvider>
   );

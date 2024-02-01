@@ -19,8 +19,8 @@ const Header: React.FC<HeaderProps> = ({ menuIcon, searchIcon, profileImage }) =
                 alignItems: 'center',
                 padding: `${rem(25)} ${rem(25)}`,
                 color: 'black',
-                fontSize: rem(24),
-                minWidth: 375,
+                fontSize: rem(14),
+                minWidth: 200,
                 fontWeight: 'normal',
             }}
         >
